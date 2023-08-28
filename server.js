@@ -23,7 +23,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 app.get('/search', async (req, res) => {
-    const query = new URLSearchParams(req.query.path)
+    const query = decodeURIComponent(req.query.path)
+    console.log(query)
 
     options.params = {
         q: query,
