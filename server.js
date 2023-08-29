@@ -41,13 +41,22 @@ app.get('/search', async (req, res) => {
 })
 
 app.get('/searchById', async (req, res) => {
-    console.log(req.query);
-    const geniusURL = req.query.geniusURL
-    const path = req.query.path
+
+    options.params = {id: req.query.id} 
+    console.log(options)
+
+    let lyricsAndDetailsArray = [];
 
     try {
-        const response = await axios.request(geniusURL + path, options)
-        res.send(response.data.response.song)
+        const lyrics = await axios.request(`${BASE_URL}/song/lyrics/`, options)
+        console.log(lyrics.data)
+        lyricsAndDetailsArray.push(lyrics.data.lyrics)
+        const details = await axios.request(`${BASE_URL}/song/details/`, options)
+        lyricsAndDetailsArray.push(details.data)
+        console.log(lyricsAndDetailsArray)
+        lyricsAndDetailsArray.concat()
+        res.send(lyricsAndDetailsArray)
+        lyricsAndDetailsArray = [];
     } catch(err) {
         console.log(err);
     }
