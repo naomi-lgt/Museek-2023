@@ -33,7 +33,7 @@ a {
 blockquote {
     quotes: "«" "»";
     font-style: italic;
-    margin: 1em 0 1em 1em;
+    padding: 1rem .5rem;
 }
 
 .museek-container {

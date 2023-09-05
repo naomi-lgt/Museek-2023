@@ -8,19 +8,15 @@ const dropdownContent = document.querySelector('.museek-info-dropdown-content');
 const ytPlayer = document.querySelector('iframe')
 
 const showSelectSongInfo = async song => {
-    const geniusURL = `https://genius.com`
-    const songPath = `${song[0].path}`
-
-    const getLyricsAndDesc = await axios.get(`http://localhost:3333/lyrics/`, { params: { geniusURL, songPath }} )
-    const lyricsArray = getLyricsAndDesc.data[0]
-    const descriptionArray = getLyricsAndDesc.data[1]
     loader.style.display = 'none'
-
     songInfo.style.display = 'flex';
 
     // Displaying lyrics
     const lyricsContainer = document.querySelector('.museek-lyrics-content')
-    lyricsContainer.innerHTML = lyricsArray;
+    lyricsContainer.innerHTML = song[0].lyrics;
+
+    // If we don't want to keep the anchor tags
+    lyricsContainer.querySelectorAll('a').forEach(tag => tag.replaceWith(...tag.childNodes));
 
     document.querySelectorAll('a').forEach(tag => {
         // Taking the a tag link and slicing the museek's baseURL
@@ -35,8 +31,8 @@ const showSelectSongInfo = async song => {
     document.querySelector('.song-artist').innerHTML = `by ${song[0].artist}`
     document.querySelector('.song-album').innerHTML = `from ${song[0].album}`
 
-    if(descriptionArray.length > 0) {
-        dropdownContent.querySelector('.song-description').innerHTML = descriptionArray
+    if(song[0].description.length > 0) {
+        dropdownContent.querySelector('.song-description').innerHTML = song[0].description
         // If description has images, set their sizes
         dropdownContent.querySelectorAll('*').forEach(itm => {
             itm.style.width = '100%'
@@ -51,20 +47,7 @@ const showSelectSongInfo = async song => {
         dropdownContent.style.display = 'none'
     }
 
-    // Getting the YouTube URL
-    const media = song[0].media
-    
-    const filteredMedia = media.filter(item => {
-        return item.provider === 'youtube'
-    })
-    
-    let youtubeURL = []
-
-    filteredMedia.forEach(media => {
-        youtubeURL.push(media.url)
-    })
-
-    const youtubeID =  youtubeURL.toString().slice(31)
+    const youtubeID = song[0].youtube.slice(31)
     ytPlayer.src = `https://www.youtube.com/embed/${youtubeID}`
 }
 
