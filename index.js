@@ -52,13 +52,14 @@ const showSelectSongInfo = async song => {
 }
 
 const mapDataFromId = song => {
+    console.log(song)
     const selectedSong = Array(song).map(data => {
         return {
             id: data.song_id,
             artist: data.song.artist_names,
             title: data.song.title,
             album: data.song.album.name,
-            artwork: data.song.custom_song_art_image_url,
+            artwork: data.song.song_art_image_url,
             youtube: data.song.youtube_url,
             description: data.song.description.html,
             lyrics: data.lyrics.body.html,
