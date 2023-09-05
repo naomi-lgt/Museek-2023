@@ -49,14 +49,13 @@ app.get('/searchById', async (req, res) => {
 
     try {
         const lyrics = await axios.request(`${BASE_URL}/song/lyrics/`, options)
-        console.log(lyrics.data)
-        lyricsAndDetailsArray.push(lyrics.data.lyrics)
+        // console.log(lyrics.data)
         const details = await axios.request(`${BASE_URL}/song/details/`, options)
-        lyricsAndDetailsArray.push(details.data)
-        console.log(lyricsAndDetailsArray)
-        lyricsAndDetailsArray.concat()
-        res.send(lyricsAndDetailsArray)
-        lyricsAndDetailsArray = [];
+        // console.log(details.data)
+        const lyricsAndDetailsData = {...lyrics.data.lyrics, ...details.data}
+        console.log(lyricsAndDetailsData)
+        res.send(lyricsAndDetailsData)
+
     } catch(err) {
         console.log(err);
     }

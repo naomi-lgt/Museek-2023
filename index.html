@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Museek</title>
+</head>
+<body>
+    <div class="museek-container">
+        <header class="museek-header">
+            <img class="museek-logo" src="./assets/museek-logo.png" alt="Museek logo">
+        </header>
+        <div class="museek-search-group">
+            <div class="museek-search">
+                <input class="museek-search-bar" type="text" placeholder="Search for a song...">
+                <div class="museek-search-results">
+                    <!-- <div id="0" class="museek-search-results-song"></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="museek-lyrics-info-container">
+            <div class="museek-lyrics">
+                <h2>Lyrics</h2>
+                <div class="museek-lyrics-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam unde eos magni eaque pariatur natus id itaque maiores quisquam iusto fuga quae debitis facilis quidem, temporibus, placeat porro! Sunt, error! <br>
+                Ducimus explicabo libero praesentium animi tenetur necessitatibus ipsum excepturi at debitis, voluptas earum atque quae vero assumenda deleniti repudiandae voluptatibus sapiente iure temporibus tempore voluptatum architecto? Et unde incidunt error?</div>
+            </div>
+            <aside class="museek-info">
+                <div class="museek-info-dropdown">
+                    <div class="museek-info-header">
+                        <h2>About this song</h2>
+                        <img class="dropdown" src="./assets/dropdown.svg" alt="Expand song info">
+                    </div>
+                    <div class="museek-info-song">
+                        <img class="museek-artwork" src="./assets/placeholder.jpg" alt="">
+                        <div>
+                            <h3 class="song-title">Song title</h3>
+                            <h4 class="song-artist">by Artist</h4>
+                            <h4 class="song-album">from Album</h4>
+                        </div>
+                    </div>
+                    <div class="museek-info-dropdown-content">
+                        <h2>Song summary</h2>
+                        <div class="song-description"></div>
+                        <h2>Steam the song</h2>
+                        <div class="iframe-container">
+                            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="loader"></div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
