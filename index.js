@@ -1,4 +1,5 @@
 const search = document.querySelector('.museek-search-bar');
+const introduction = document.querySelector('.museek-introduction');
 const songInfo = document.querySelector('.museek-lyrics-info-container');
 const songResults = document.querySelector('.museek-search-results');
 const loader = document.querySelector('.loader')
@@ -14,17 +15,18 @@ const showSelectSongInfo = async song => {
     // Displaying lyrics
     const lyricsContainer = document.querySelector('.museek-lyrics-content')
     lyricsContainer.innerHTML = song[0].lyrics;
-
-    // If we don't want to keep the anchor tags
-    lyricsContainer.querySelectorAll('a').forEach(tag => tag.replaceWith(...tag.childNodes));
-
-    document.querySelectorAll('a').forEach(tag => {
+    
+    // Change the anchor tags URL for the genius one
+    document.querySelectorAll('a:not(:first-child)').forEach(tag => {
         // Taking the a tag link and slicing the museek's baseURL
         const tagHref = tag.href.slice(22)
         tag.href = `https://www.genius.com/${tagHref}`
         tag.setAttribute('target', '_blank')
     })
 
+    // If we don't want to keep the anchor tags in the lyrics
+    lyricsContainer.querySelectorAll('a').forEach(tag => tag.replaceWith(...tag.childNodes));
+    
     // Displaying "About this song"
     document.querySelector('.museek-artwork').src=`${song[0].artwork}`
     document.querySelector('.song-title').innerHTML = `${song[0].title}`
@@ -73,6 +75,7 @@ const mapDataFromId = song => {
 const getSongInfo = async songId => {
 
     try {
+        introduction.style.display = 'none';
         loader.style.display = 'flex'
         const response = await axios.request(`http://localhost:3333/searchById`, { params : { id: songId } });
         const songFromIdData = response.data

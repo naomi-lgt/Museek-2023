@@ -22,8 +22,7 @@ app.use(express.urlencoded({ extended: true}))
 
 app.get('/search', async (req, res) => {
     const query = decodeURIComponent(req.query.path)
-    console.log(query)
-
+    
     options.params = {
         q: query,
         per_page: '10',
