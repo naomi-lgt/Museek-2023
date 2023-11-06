@@ -1,4 +1,3 @@
-import {MUSEEK_API_URL} from "./config.js"
 const search = document.querySelector('.museek-search-bar');
 const introduction = document.querySelector('.museek-introduction');
 const songInfo = document.querySelector('.museek-lyrics-info-container');
@@ -78,7 +77,7 @@ const getSongInfo = async songId => {
     try {
         introduction.style.display = 'none';
         loader.style.display = 'flex'
-        const response = await axios.request(`${MUSEEK_API_URL}/searchById`, { params : { id: songId } });
+        const response = await axios.request(`https://museek-2023-api.onrender.com/searchById`, { params : { id: songId } });
         const songFromIdData = response.data
         mapDataFromId(songFromIdData)
     } catch (err) {
@@ -153,7 +152,7 @@ const getQuery = async () => {
     const path = encodeURIComponent(searchQuery)
 
     try {
-        const response = await axios.request(`${MUSEEK_API_URL}/search/`, { params: { path } });
+        const response = await axios.request(`https://museek-2023-api.onrender.com/search/`, { params: { path } });
         const hitsData = response.data
         mapData(hitsData);
     } catch (err) {
