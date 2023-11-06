@@ -16,11 +16,11 @@ let options = {
     }
 };
 
-app.use(cors({
-    "origin": process.env.FRONT_ORIGIN
-}))
+console.log(process.env.FRONT_ORIGIN)
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
+app.use(cors())
 
 app.get('/search', async (req, res) => {
     const query = decodeURIComponent(req.query.path)
