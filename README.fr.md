@@ -3,12 +3,15 @@
 
 Museek est un projet qui vous permet de rechercher les paroles de vos musiques préférées ! Le projet est entièrement conçu avec **JavaScript** et alimenté par l'**API de Genius** et **Node.js**.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18e1a43d-de03-49e5-9cce-54dfb8038f06/deploy-status)](https://app.netlify.com/sites/museek2023/deploys)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+
+### Accédez au site [ici](https://museek2023.netlify.app)
 
 ## Technologies
 Afin de pouvoir créer ce projet, j'ai utilisé les technologies suivantes:
@@ -27,8 +30,10 @@ Afin de pouvoir créer ce projet, j'ai utilisé les technologies suivantes:
 - Express
 - Cors
 - Dotenv
+- Render
 
 ## Hiérarchie des fichiers
+Le front-end et le back-end sont déployés séparément. Le front-end est hébergé via [Netlify](https://www.netlify.com) tandis que le back-end est déployé sur [Render](https://render.com).
 
 ### Front-end
 Les fichiers à la racine sont les fichiers front-end. Dans **index.js**, vous pouvez voir l'entièreté du code front-end qui gère la barre de recherche, les requêtes à l'API et comment afficher les données. J'ai fait attention d'ajouter quelques commentaires dans mon code afin qu'il soit plus lisible et compréhensible.

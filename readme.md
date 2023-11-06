@@ -3,6 +3,7 @@
 
 Museek is a project allowing you to search for your favorite music lyrics! The project is entirely made with **JavaScript**  and powered by the **Genius API** and **Node.js**.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18e1a43d-de03-49e5-9cce-54dfb8038f06/deploy-status)](https://app.netlify.com/sites/museek2023/deploys)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
@@ -10,6 +11,7 @@ Museek is a project allowing you to search for your favorite music lyrics! The p
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
+### Check the website [here](https://museek2023.netlify.app)
 
 ## Technologies
 In order to make this project, I used the following technologies:
@@ -28,8 +30,10 @@ In order to make this project, I used the following technologies:
 - Express
 - Cors
 - Dotenv
+- Render
 
 ## File hierarchy
+The front-end and back-end are deployed separately. The front-end is hosted via [Netlify](https://www.netlify.com) whereas the back-end is deployed on [Render](https://render.com).
 
 ### Front-end
 The root folder files are the front-end files. In **index.js**, you are able to see the full front-end code handling the search bar, the API requests and how to display the data. I made sure to add some comments in my code so that it is readable and understandable.
