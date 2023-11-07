@@ -3,6 +3,10 @@
 
 Museek is a project allowing you to search for your favorite music lyrics! The project is entirely made with **JavaScript**  and powered by the **Genius API** and **Node.js**.
 
+<div align="center">
+  <img src="https://s5.gifyu.com/images/S8Dz2.gif" alt="animated" />
+</div>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/18e1a43d-de03-49e5-9cce-54dfb8038f06/deploy-status)](https://app.netlify.com/sites/museek2023/deploys)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
