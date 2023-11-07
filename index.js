@@ -54,7 +54,6 @@ const showSelectSongInfo = async song => {
 }
 
 const mapDataFromId = song => {
-    console.log(song)
     const selectedSong = Array(song).map(data => {
         return {
             id: data.song_id,
@@ -127,7 +126,6 @@ const showResults = async (results) => {
 
 
 const mapData = hits => {
-    // console.log(Object.values(hits).flatMap(hit => console.log(hit)))
     const songs = Object.values(hits).flat().map(hit => {
         return {
             id: hit.result.id,
