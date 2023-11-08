@@ -1,5 +1,5 @@
 # :musical_note: Bienvenue sur le dépot de Museek ! :notes:
-🚀 Version 2.0 ([English](https://github.com/naomi-lgt/Museek-2023/blob/master/README.md), [Français](https://github.com/naomi-lgt/Museek-2023/blob/master/README.fr.md))
+🚀 Version 2.0 ([English](https://github.com/naomi-lgt/Museek-2023/blob/main/README.md), [Français](https://github.com/naomi-lgt/Museek-2023/blob/main/README.fr.md))
 
 Museek est un projet qui vous permet de rechercher les paroles de vos musiques préférées ! Le projet est entièrement conçu avec **JavaScript** et alimenté par l'**API de Genius** et **Node.js**.
 
